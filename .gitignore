@@ -1,5 +1,6 @@
 /.module-cache
 /bower_components
+/script
 /node_modules
 /build
 /examples
