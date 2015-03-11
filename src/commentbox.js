@@ -1,11 +1,13 @@
+var converter = new Showdown.converter();
 var Comment = React.createClass({
 	render: function(){
-		return(
-			<div className="comment">
-				<h3 className="commentAuthor">
-					{this.props.author}
-				</h3>
-				{this.props.children}
+		var rawMarkUp = converter.makeHtml(this.props.children.toString())
+    return(
+      <div className="comment">
+        <h3 className="commentAuthor">
+          {this.props.author}
+        </h3>
+        <span dangerouslySetInnerHTML={{__html: rawMarkUp}} />
 			</div>
 		);
 	}
@@ -15,8 +17,8 @@ var CommentList = React.createClass({
   render: function(){
     return(
       <div className="commentList">
-        <Comment author="Joy">It is so Joyful~</Comment>
-        <Comment author="Fun">It is so Fun!</Comment>
+        <Comment author="Joy">###It is so Joyful</Comment>
+        <Comment author="Fun">###It is so Fun!</Comment>
       </div>
     );
   }

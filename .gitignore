@@ -1,7 +1,8 @@
-/.module-cache
-/bower_components
-/script
-/node_modules
-/build
-/examples
+.module-cache/
+public/bower_components/
+script/
+node_modules/
+build/
+examples/
+
 .log
