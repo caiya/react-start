@@ -1,0 +1,12 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "examples/basic-commonjs/package.json",
+        "examples/server-rendering/jsapp/package.json",
+        "examples/server-rendering/reactserver/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
